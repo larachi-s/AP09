@@ -30,5 +30,23 @@
         VALUES (#{id},#{nom}, #{prenom} ,#{sexe}, #{dateNaissance},#{numeroTelephone},#{adresse})
     </insert>
 
+
+
+    <update id="updatePatient" parameterType="dz.sofiane.apt_9.apt9.models.Patient">
+        UPDATE cabinet.patient
+        SET nom=#{nom}, prenom=#{prenom},sexe=#{sexe}, dateNaissance=#{dateNaissance},
+        date_consultation=#{date_consultation}, numeroTelephone=#{numeroTelephone}, adresse=#{adresse}
+        WHERE id=#{id}
+    </update>
+
+
+    <delete id="deletPatient" parameterType="int">
+        DELETE FROM cabinet.patient WHERE id=#{id}
+    </delete>
+
+    <select id="getById" parameterType="int" resultMap="patientResultMap">
+        SELECT * FROM cabinet.patient WHERE id = #{id}
+    </select>
+
 </mapper>
 

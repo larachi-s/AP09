@@ -1,0 +1,13 @@
+#spring:
+#  application:
+#    name: apt9
+#  server:
+#    port: 8081
+#  datasource:
+#    platform: postgres
+#    url: jdbc:postgresql://localhost:5432/sb_002
+#    username: postgres
+#    password: admin
+#mybatis:
+#  mapper-locations: mappers/*Mapper.xml
+#
